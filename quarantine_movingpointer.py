@@ -38,9 +38,9 @@ def quarantine(world: str) -> float:
 
     Given a map of the world as a string, returns the percentage % of the total population that got infected.
 
-    Instead of splitting world on "X" and using a nested loop to check containment of "1" in each substring,
-    this approach passes over world one character at a time, updating the infected count on the fly. Therefore this
-    approach is more efficient than the string-splitting approach.
+    Instead of splitting world on "X" and checking for a "1" in each substring, this approach passes over world
+    over one character at a time updating the infected count on the fly, which avoids the additional O(n) cost
+    from splitting world.
 
     :param world: map of world as string
     :return: percentage % of the total population that got infected
