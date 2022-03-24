@@ -49,8 +49,8 @@ def quarantine(world: str) -> float:
     total_infected = 0  # total infected in world
     continent_population = 0  # population of continent
     num_infected = 0  # number of infected people in continent
-    for i in range(len(world)):
-        char = world[i]
+    
+    for char in world:
         if char in {"0", "1"}:  # set of 0 and 1 for O(1) containment check
             total_population += 1
             continent_population += 1
